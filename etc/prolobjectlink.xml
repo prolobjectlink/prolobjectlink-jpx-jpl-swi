@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="org.logicware.database.lock.sleep">40</entry>
+<entry key="org.logicware.database.storage.mode">STORAGE_POOL</entry>
+<entry key="org.logicware.database.containerFactory">org.logicware.prolog.jtrolog.JTrologContainerFactory</entry>
+<entry key="org.logicware.database.lock.timegap">1</entry>
+<entry key="org.logicware.database.password"/>
+<entry key="org.logicware.database.lock.granularity">80</entry>
+<entry key="org.logicware.database.server.port">5370</entry>
+<entry key="org.logicware.database.user">sa</entry>
+<entry key="org.logicware.database.prologProvider">org.logicware.prolog.jtrolog.JTrolog</entry>
+</properties>
