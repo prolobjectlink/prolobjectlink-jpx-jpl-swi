@@ -21,7 +21,6 @@
  */
 package org.prolobjectlink;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -78,14 +77,14 @@ public abstract class BaseTest {
 	protected Schema hschema;
 
 	// file system separator
-	protected final static char SEPARATOR = File.separatorChar;
+	protected final static char SEPARATOR = '/';
 
 	protected static final String LOCATION = "data-test";
 	protected static final String POOL_ROOT = "pool-test";
 	protected static final String POOL_NAME = "pool-name";
 	protected static final String ROOT = "data" + SEPARATOR + "test";
 	protected static final String BASE_LOCATION = "data" + SEPARATOR + "test" + SEPARATOR + "org" + SEPARATOR
-			+ "logicware" + SEPARATOR + "domain" + SEPARATOR + "geometry";
+			+ "prolobjectlink" + SEPARATOR + "domain" + SEPARATOR + "geometry";
 
 	// File Backup Names Constants
 	protected static final String BACKUP_ZIP_FILE_NAME_1 = "data.zip";

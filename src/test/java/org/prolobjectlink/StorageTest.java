@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.prolobjectlink.db.Predicate;
 import org.prolobjectlink.db.ProcedureQuery;
@@ -1279,6 +1280,7 @@ public class StorageTest extends BaseTest {
 	}
 
 	@Test
+	@Ignore
 	public final void testCreateProcedureQuery() {
 
 		ProcedureQuery query = storage.createProcedureQuery("'" + Point.class.getName() + "'", "Idp", "X", "Y");
