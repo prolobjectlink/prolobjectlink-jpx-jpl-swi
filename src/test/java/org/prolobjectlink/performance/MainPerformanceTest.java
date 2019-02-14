@@ -41,7 +41,7 @@ public class MainPerformanceTest {
 	// private static final String ROOT = "data" + File.separator + "test";
 
 	protected static final Class<? extends ContainerFactory> driver = SwiPrologContainerFactory.class;
-	protected static final PrologProvider prolog = Prolog.newProvider(SwiProlog.class);
+	protected static final PrologProvider prolog = Prolog.getProvider(SwiProlog.class);
 
 	public MainPerformanceTest() {
 	}
