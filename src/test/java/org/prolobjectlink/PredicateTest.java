@@ -54,7 +54,7 @@ public class PredicateTest extends BaseTest {
 			private static final long serialVersionUID = 1688234976465113447L;
 
 			public boolean evaluate(Point point) {
-				return (point.getX() == 3.5) && (point.getY() == 10.14);
+				return (point.getX() == 3) && (point.getY() == 14);
 			}
 		});
 
@@ -104,7 +104,7 @@ public class PredicateTest extends BaseTest {
 			private static final long serialVersionUID = 2134840374720572436L;
 
 			public boolean evaluate(Point point) {
-				return (point.getX() == 3.5) && (point.getY() == 10.14);
+				return (point.getX() == 3) && (point.getY() == 14);
 			}
 		})
 
