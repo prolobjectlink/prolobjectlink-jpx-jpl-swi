@@ -5,7 +5,7 @@
 	<groupId>org.prolobjectlink</groupId>
 	<artifactId>prolobjectlink-jpx-jpl-swi</artifactId>
 	<version>1.0.0</version>
-	<name>prolobjectlink-jpp-jpl-swi</name>
+	<name>prolobjectlink-jpx-jpl-swi</name>
 	<description>prolobjectlink-jpp-jpl-swi</description>
 
 	<url>https://github.com/prolobjectlink/${project.name}</url>
@@ -85,12 +85,17 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.prolobjectlink</groupId>
+			<artifactId>prolobjectlink-jpi-jpl-swi</artifactId>
+			<version>[1.0.0, )</version>
+		</dependency>
+		<dependency>
+			<groupId>org.prolobjectlink</groupId>
 			<artifactId>prolobjectlink-jpp</artifactId>
 			<version>[1.0.0, )</version>
 		</dependency>
 		<dependency>
 			<groupId>org.prolobjectlink</groupId>
-			<artifactId>prolobjectlink-jpi-jpl-swi</artifactId>
+			<artifactId>prolobjectlink-jps-jetty</artifactId>
 			<version>[1.0.0, )</version>
 		</dependency>
 		<dependency>
