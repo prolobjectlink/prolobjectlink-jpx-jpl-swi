@@ -21,12 +21,22 @@
  */
 package org.prolobjectlink;
 
+import static org.prolobjectlink.db.XmlParser.XML;
+
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import javax.jdo.PersistenceManager;
+import javax.jdo.PersistenceManagerFactory;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 import org.junit.After;
 import org.junit.Before;
@@ -35,6 +45,7 @@ import org.prolobjectlink.db.DatabaseClass;
 import org.prolobjectlink.db.DatabaseUser;
 import org.prolobjectlink.db.HierarchicalCache;
 import org.prolobjectlink.db.HierarchicalDatabase;
+import org.prolobjectlink.db.Protocol;
 import org.prolobjectlink.db.RelationalDatabase;
 import org.prolobjectlink.db.Schema;
 import org.prolobjectlink.db.Storage;
@@ -42,6 +53,8 @@ import org.prolobjectlink.db.StorageManager;
 import org.prolobjectlink.db.StorageMode;
 import org.prolobjectlink.db.StoragePool;
 import org.prolobjectlink.db.etc.Settings;
+import org.prolobjectlink.db.jpa.spi.JPAPersistenceSchemaVersion;
+import org.prolobjectlink.db.jpa.spi.JPAPersistenceVersion;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
@@ -76,6 +89,11 @@ public abstract class BaseTest {
 	protected Schema rschema;
 	protected Schema hschema;
 
+	protected EntityManager JPA_EM;
+	protected EntityManagerFactory JPA_EMF;
+	protected PersistenceManager JDO_PM;
+	protected PersistenceManagerFactory JDO_PMF;
+
 	// file system separator
 	protected final static char SEPARATOR = '/';
 
@@ -96,6 +114,8 @@ public abstract class BaseTest {
 	protected static final String BACKUP_ZIP_FILE_PATH_2 = BACKUP_DIRECTORY + BACKUP_ZIP_FILE_NAME_2;
 	protected static final String BACKUP_ZIP_FILE_PATH_3 = BACKUP_DIRECTORY + BACKUP_ZIP_FILE_NAME_3;
 	protected static final String BACKUP_ZIP_FILE_PATH_4 = BACKUP_DIRECTORY + BACKUP_ZIP_FILE_NAME_4;
+
+	protected final Map<String, Object> properties = new HashMap<String, Object>(5);
 
 	protected static final Class<? extends ContainerFactory> driver = SwiPrologContainerFactory.class;
 	protected static final PrologProvider provider = Prolog.getProvider(SwiProlog.class);
@@ -126,8 +146,42 @@ public abstract class BaseTest {
 	protected static final Polygon triangle = new Polygon(new String("triangle"), ab, bc, ca);
 	protected static final Polygon tetragon = new Tetragon(new String("tetragon"), ab, bc, cd, da);
 
+	protected JPAPersistenceSchemaVersion schemaVersion = new JPAPersistenceSchemaVersion("1.0", "UTF-8");
+	protected JPAPersistenceVersion persistenceVersion = new JPAPersistenceVersion(
+
+			"2.0",
+
+			"http://java.sun.com/xml/ns/persistence",
+
+			"http://www.w3.org/2001/XMLSchema-instance",
+
+			"http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+
+	);
+
+	protected URL memoryURL = null;
+	protected URL remoteURL = null;
+
+	protected URL persistenceXml = Thread.currentThread().getContextClassLoader().getResource(XML);
+
 	@Before
 	public void setUp() throws Exception {
+
+		System.setProperty("java.protocol.handler.pkgs", Protocol.class.getPackage().getName());
+
+		memoryURL = new URL("mempdb:~/test");
+		remoteURL = new URL("rempdb://localhost:5370/test");
+
+		properties.put("javax.persistence.jdbc.driver", SwiPrologContainerFactory.class.getName());
+		properties.put("javax.persistence.jdbc.url", "jdbc:prolobjectlink:mempdb:~/test");
+		properties.put("javax.persistence.jdbc.user", "sa");
+		properties.put("javax.persistence.jdbc.password", "");
+
+		JPA_EMF = Persistence.createEntityManagerFactory("test");
+		JPA_EM = JPA_EMF.createEntityManager();
+
+//		JDO_PMF = JDOHelper.getPersistenceManagerFactory("test");
+//		JDO_PM = JDO_PMF.getPersistenceManager();
 
 		settings = new Settings(driver);
 		cache = settings.createHierarchicalCache();

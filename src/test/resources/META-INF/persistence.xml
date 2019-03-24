@@ -26,28 +26,34 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
 
-	<persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="test"
+		transaction-type="RESOURCE_LOCAL">
 
 		<description>This is an implementation of JPA</description>
-		<provider>org.logicware.provider.TuPrologPersistenceProvider</provider>
+		<provider>org.prolobjectlink.provider.SwiPrologPersistenceProvider
+		</provider>
 
 		<jta-data-source>jdbc/sample</jta-data-source>
 
-		<class>org.logicware.model.Point</class>
-		<class>org.logicware.model.Segment</class>
-		<class>org.logicware.model.Polygon</class>
-		<class>org.logicware.model.Tetragon</class>
-		<class>org.logicware.model.Person</class>
-		<class>org.logicware.model.Department</class>
+		<class>org.prolobjectlink.domain.geometry.Point</class>
+		<class>org.prolobjectlink.domain.geometry.Segment</class>
+		<class>org.prolobjectlink.domain.geometry.Polygon</class>
+		<class>org.prolobjectlink.domain.geometry.Tetragon</class>
+		<class>org.prolobjectlink.domain.model.Person</class>
+		<class>org.prolobjectlink.domain.model.Employee</class>
+		<class>org.prolobjectlink.domain.model.Department</class>
+		<class>org.prolobjectlink.domain.model.Node</class>
 
 		<properties>
 
-			<property name="javax.persistence.jdbc.driver" value="org.logicware.jpa.JPADriver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:prolobjectlink:store:data-test" />
+			<property name="javax.persistence.jdbc.driver"
+				value="org.prolobjectlink.prolog.jpl.swi.SwiPrologContainerFactory" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:prolobjectlink:mempdb:~/test" />
 			<property name="javax.persistence.jdbc.user" value="sa" />
 			<property name="javax.persistence.jdbc.password" value="" />
 
 		</properties>
-		
+
 	</persistence-unit>
 </persistence>
