@@ -19,25 +19,21 @@
  * <http://www.gnu.org/licenses/lgpl-2.1.html>.
  * #L%
  */
-package org.prolobjectlink.prolog.jpl.swi;
+package org.prolobjectlink.db.prolog.jpl.swi;
 
-import org.prolobjectlink.db.ContainerFactory;
 import org.prolobjectlink.db.HierarchicalCache;
-import org.prolobjectlink.db.ObjectConverter;
 import org.prolobjectlink.db.etc.Settings;
-import org.prolobjectlink.db.prolog.PrologHierarchicalCache;
-import org.prolobjectlink.prolog.PrologProvider;
-import org.prolobjectlink.prolog.PrologTerm;
+import org.prolobjectlink.db.prolog.PrologContainerFactory;
+import org.prolobjectlink.prolog.jpl.swi.SwiProlog;
 
-public class SwiPrologHierarchicalCache extends PrologHierarchicalCache implements HierarchicalCache {
+public final class SwiPrologContainerFactory extends PrologContainerFactory {
 
-	public SwiPrologHierarchicalCache(PrologProvider provider, Settings settings, ContainerFactory containerFactory) {
-		super(provider, settings, new SwiPrologContainerFactory(settings));
+	public SwiPrologContainerFactory(Settings settins) {
+		super(settins, new SwiProlog());
 	}
 
-	public SwiPrologHierarchicalCache(PrologProvider provider, Settings settings, ObjectConverter<PrologTerm> converter,
-			ContainerFactory containerFactory) {
-		super(provider, settings, converter, new SwiPrologContainerFactory(settings));
+	public HierarchicalCache createHierarchicalCache() {
+		return new SwiPrologHierarchicalCache(getProvider(), getSettings(), this);
 	}
 
 }

@@ -55,6 +55,7 @@ import org.prolobjectlink.db.StoragePool;
 import org.prolobjectlink.db.etc.Settings;
 import org.prolobjectlink.db.jpa.spi.JPAPersistenceSchemaVersion;
 import org.prolobjectlink.db.jpa.spi.JPAPersistenceVersion;
+import org.prolobjectlink.db.prolog.jpl.swi.SwiPrologContainerFactory;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
@@ -69,7 +70,6 @@ import org.prolobjectlink.prolog.Prolog;
 import org.prolobjectlink.prolog.PrologInteger;
 import org.prolobjectlink.prolog.PrologProvider;
 import org.prolobjectlink.prolog.jpl.swi.SwiProlog;
-import org.prolobjectlink.prolog.jpl.swi.SwiPrologContainerFactory;
 
 /** @author Jose Zalacain @since 1.0 */
 public abstract class BaseTest {

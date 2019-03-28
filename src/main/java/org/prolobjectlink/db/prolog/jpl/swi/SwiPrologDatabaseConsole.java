@@ -19,7 +19,7 @@
  * <http://www.gnu.org/licenses/lgpl-2.1.html>.
  * #L%
  */
-package org.prolobjectlink.prolog.jpl.swi;
+package org.prolobjectlink.db.prolog.jpl.swi;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -30,6 +30,7 @@ import org.prolobjectlink.db.platform.linux.LinuxDatabaseServer;
 import org.prolobjectlink.db.platform.macosx.MacosxDatabaseServer;
 import org.prolobjectlink.db.platform.win32.Win32DatabaseServer;
 import org.prolobjectlink.db.prolog.AbstractDatabaseConsole;
+import org.prolobjectlink.prolog.jpl.swi.SwiProlog;
 import org.prolobjectlink.web.platform.UndertowServerControl;
 import org.prolobjectlink.web.platform.UndertowWebServer;
 import org.prolobjectlink.web.platform.WebPlatformUtil;
