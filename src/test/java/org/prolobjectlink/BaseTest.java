@@ -32,8 +32,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.jdo.PersistenceManager;
-import javax.jdo.PersistenceManagerFactory;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -91,8 +89,6 @@ public abstract class BaseTest {
 
 	protected EntityManager JPA_EM;
 	protected EntityManagerFactory JPA_EMF;
-	protected PersistenceManager JDO_PM;
-	protected PersistenceManagerFactory JDO_PMF;
 
 	// file system separator
 	protected final static char SEPARATOR = '/';
