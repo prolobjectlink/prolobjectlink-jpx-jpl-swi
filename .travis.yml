@@ -1,11 +1,47 @@
 language: java
 dist: trusty
-sudo: false
+sudo: true
 addons:
   apt:
     packages:
-      - oracle-java8-installer
-      - oracle-java9-installer
+      - build-essential
+      - pkg-config
+      - ncurses-dev
+      - libreadline-dev
+      - libedit-dev
+      - libgmp-dev
+      - libssl-dev
+      - unixodbc-dev
+      - zlib1g-dev
+      - libarchive-dev
+      - libossp-uuid-dev
+      - libxext-dev
+      - libice-dev
+      - libjpeg-dev
+      - libxinerama-dev
+      - libxft-dev
+      - libxpm-dev
+      - libxt-dev
+      - libdb-dev
+      - libpcre3-dev
+      - libyaml-dev
+      - openjdk-8-jdk
+      - junit
+      - ninja-build
+  homebrew:
+    packages:
+      - cmake
+      - ninja
+      - gmp
+      - libarchive
+      - readline
+      - ossp-uuid
+      - openssl
+      - libyaml
+      - unixodbc
+      - berkeley-db
+      - pcre
+      - jpeg
 
 before_install:
   - wget https://archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.zip
@@ -13,45 +49,43 @@ before_install:
   - export M2_HOME=$PWD/apache-maven-3.5.0
   - export PATH=$M2_HOME/bin:$PATH
   - echo "MAVEN_OPTS='-Dmaven.repo.local=$HOME/.m2/repository -Xmx1g -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss:SSS'" > ~/.mavenrc
+  - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+  - echo $JAVA_HOME
+  - sudo touch /etc/ld.so.conf.d/java.conf
+  - echo $JAVA_HOME/jre/lib/amd64 | sudo tee -a /etc/ld.so.conf.d/java.conf
+  - echo $JAVA_HOME/jre/lib/amd64/server | sudo tee -a /etc/ld.so.conf.d/java.conf
+  - sudo ldconfig
+  - export PATH=$PATH:$JAVA_HOME/bin
+  - export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib/tools.jar
+  - export CLASSPATH=$CLASSPATH:$JAVA_HOME/jre/lib/rt.jar
+  - wget https://www.swi-prolog.org/download/stable/src/pl-6.6.6.tar.gz
+  - tar -xzvf pl-6.6.6.tar.gz
+  - cd pl-6.6.6
+  - ./configure --with-world
+  - make
+  - sudo make install
+  - cd packages/jpl
+  - ./configure
+  - make
+  - export SWI_HOME=/home/travis/build/prolobjectlink/prolobjectlink-jpx-jpl-swi/pl-6.6.6
+  - export PATH=$PATH:$SWI_HOME/bin
+  - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/travis/build/prolobjectlink/prolobjectlink-jpx-jpl-swi/pl-6.6.6/packages/jpl
+  - export CLASSPATH=$CLASSPATH:/home/travis/build/prolobjectlink/prolobjectlink-jpx-jpl-swi/pl-6.6.6/packages/jpl/jpl.jar
+  - cd ..
+  - cd ..
+  - cd ..
 
 install:
   -
 
 matrix:
-  fast_finish: true
-  include:
-    - jdk: oraclejdk8
+   fast_finish: true
+   include:
+   -  jdk: oraclejdk8
       env:
-        - DESC="acceptance tests"
-        - CMD="mvn install --projects acceptance-tests --also-make --activate-profiles all --batch-mode --show-version --errors"
-
-    - jdk: oraclejdk8
-      env:
-        - DESC="findbugs"
-        - CMD="mvn install findbugs:check --projects '!scala-unit-tests,!jmh-scala-tests,!jmh-tests,!p2-repository' --activate-profiles all -DskipTests=true --batch-mode --show-version --errors"
-
-    - jdk: oraclejdk8
-      env:
-        - DESC="checkstyle"
-        - CMD="mvn install checkstyle:check --activate-profiles all -DskipTests=true --batch-mode --show-version --errors"
-
-    - jdk: oraclejdk8
-      env:
-        - DESC="unit tests"
-        - CMD="mvn install --batch-mode --show-version --errors"
-
-    - jdk: oraclejdk8
-      env:
-        - DESC="compile jmh-tests and performance-tests"
-        - CMD="mvn install --projects jmh-tests,performance-tests --also-make --activate-profiles all -DskipTests=true --batch-mode --show-version --errors"
-
-    - jdk: oraclejdk9
-      env:
-        - DESC="unit tests Java 9"
-        - CMD="mvn install --projects '!scala-unit-tests,!jmh-scala-tests,!jmh-tests,!p2-repository' --batch-mode --show-version --errors"
-
-script: eval travis_wait 35 $CMD
-
+      - DESC="Install Java 8"
+      - CMD="mvn clean install site"
+      
 cache:
   directories:
   - ~/.m2
