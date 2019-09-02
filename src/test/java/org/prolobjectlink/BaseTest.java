@@ -52,6 +52,7 @@ import org.prolobjectlink.db.etc.Settings;
 import org.prolobjectlink.db.jpa.spi.JPAPersistenceSchemaVersion;
 import org.prolobjectlink.db.jpa.spi.JPAPersistenceVersion;
 import org.prolobjectlink.db.prolog.jpl.swi.SwiPrologContainerFactory;
+import org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseProvider;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
@@ -112,7 +113,7 @@ public abstract class BaseTest {
 	protected final Map<String, Object> properties = new HashMap<String, Object>(5);
 
 	protected static final Class<? extends ContainerFactory> driver = SwiPrologContainerFactory.class;
-	protected static final PrologProvider provider = Prolog.getProvider(SwiProlog.class);
+	protected static final PrologProvider provider = Prolog.getProvider(SwiPrologDatabaseProvider.class);
 
 	protected static final PrologInteger zero = provider.newInteger(0);
 	protected static final PrologInteger one = provider.newInteger(1);

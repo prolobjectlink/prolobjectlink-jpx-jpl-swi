@@ -22,12 +22,11 @@ package org.prolobjectlink.db.prolog.jpl.swi;
 import org.prolobjectlink.db.HierarchicalCache;
 import org.prolobjectlink.db.etc.Settings;
 import org.prolobjectlink.db.prolog.PrologContainerFactory;
-import org.prolobjectlink.prolog.jpl.swi.SwiProlog;
 
 public final class SwiPrologContainerFactory extends PrologContainerFactory {
 
 	public SwiPrologContainerFactory(Settings settins) {
-		super(settins, new SwiProlog());
+		super(settins, new SwiPrologDatabaseProvider());
 	}
 
 	public HierarchicalCache createHierarchicalCache() {

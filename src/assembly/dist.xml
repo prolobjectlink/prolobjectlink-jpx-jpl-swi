@@ -21,7 +21,7 @@
 				<include>README*</include>
 			</includes>
 		</fileSet>
-
+		
 		<!-- binary script folder -->
 		<fileSet>
 			<directory>${project.basedir}/bin</directory>
