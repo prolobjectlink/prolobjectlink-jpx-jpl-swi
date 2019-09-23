@@ -5,3 +5,4 @@ SET CLASSPATH=%CURRENT_DIRECTORY%lib\*
 
 : default jdk
 java -classpath %CLASSPATH% org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseConsole -g
+java -classpath %CLASSPATH% org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseConsole -s

@@ -28,15 +28,15 @@ import org.prolobjectlink.db.platform.linux.LinuxDatabaseServer;
 import org.prolobjectlink.db.platform.macosx.MacosxDatabaseServer;
 import org.prolobjectlink.db.platform.win32.Win32DatabaseServer;
 import org.prolobjectlink.db.prolog.AbstractDatabaseConsole;
+import org.prolobjectlink.web.application.GrizzlyModelGenerator;
 import org.prolobjectlink.web.application.ModelGenerator;
-import org.prolobjectlink.web.application.UndertowModelGenerator;
-import org.prolobjectlink.web.platform.UndertowServerControl;
-import org.prolobjectlink.web.platform.UndertowWebServer;
+import org.prolobjectlink.web.platform.GrizzlyServerControl;
+import org.prolobjectlink.web.platform.GrizzlyWebServer;
 import org.prolobjectlink.web.platform.WebPlatformUtil;
 import org.prolobjectlink.web.platform.WebServerControl;
-import org.prolobjectlink.web.platform.linux.undertow.LinuxUndertowWebServer;
-import org.prolobjectlink.web.platform.macosx.undertow.MacosxUndertowWebServer;
-import org.prolobjectlink.web.platform.win32.undertow.Win32UndertowWebServer;
+import org.prolobjectlink.web.platform.linux.grizzly.LinuxGrizzlyWebServer;
+import org.prolobjectlink.web.platform.macosx.grizzly.MacosxGrizzlyWebServer;
+import org.prolobjectlink.web.platform.win32.grizzly.Win32GrizzlyWebServer;
 
 /**
  * 
@@ -54,26 +54,26 @@ public class SwiPrologDatabaseConsole extends AbstractDatabaseConsole implements
 	}
 
 	public WebServerControl getWebServerControl(int port) {
-		UndertowWebServer server = null;
+		GrizzlyWebServer server = null;
 		DatabaseServer database = null;
 		if (WebPlatformUtil.runOnWindows()) {
 			database = new Win32DatabaseServer();
-			server = new Win32UndertowWebServer(port);
+			server = new Win32GrizzlyWebServer(port);
 		} else if (WebPlatformUtil.runOnOsX()) {
 			database = new MacosxDatabaseServer();
-			server = new MacosxUndertowWebServer(port);
+			server = new MacosxGrizzlyWebServer(port);
 		} else if (WebPlatformUtil.runOnLinux()) {
 			database = new LinuxDatabaseServer();
-			server = new LinuxUndertowWebServer(port);
+			server = new LinuxGrizzlyWebServer(port);
 		} else {
-			Logger.getLogger(UndertowServerControl.class.getName()).log(Level.SEVERE, null, "Not supported platfor");
+			Logger.getLogger(GrizzlyServerControl.class.getName()).log(Level.SEVERE, null, "Not supported platfor");
 			System.exit(1);
 		}
-		return new UndertowServerControl(server, database);
+		return new GrizzlyServerControl(server, database);
 	}
 
 	public ModelGenerator getModelGeneratorInstance() {
-		return new UndertowModelGenerator();
+		return new GrizzlyModelGenerator();
 	}
 
 }
