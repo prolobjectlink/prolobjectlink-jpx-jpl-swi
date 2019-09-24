@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2019-09-24T17:35:16.049">
+<file name="D:\Programacion\eclipse-java-photon-workspace\prolobjectlink-jpx-jpl-swi\src\main\java\org\prolobjectlink\db\prolog\jpl\swi\SwiPrologHierarchicalCache.java">
+<violation beginline="32" endline="34" begincolumn="16" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="org.prolobjectlink.db.prolog.jpl.swi" class="SwiPrologHierarchicalCache" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused constructor parameters such as 'containerFactory'.
+</violation>
+<violation beginline="36" endline="39" begincolumn="16" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="org.prolobjectlink.db.prolog.jpl.swi" class="SwiPrologHierarchicalCache" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused constructor parameters such as 'containerFactory'.
+</violation>
+</file>
+</pmd>
