@@ -768,12 +768,14 @@ public class HierarchicalDatabaseTest extends BaseTest {
 	@Test
 	public void testLocationOf() {
 
-		assertEquals("dat" + SEPARATOR + "hierarchical" + SEPARATOR + hdb.getName() + SEPARATOR + "database" + SEPARATOR
-				+ Point.class.getPackage().getName().replace('.', SEPARATOR), hdb.locationOf(Point.class));
-		assertEquals("dat" + SEPARATOR + "hierarchical" + SEPARATOR + hdb.getName() + SEPARATOR + "database" + SEPARATOR
-				+ Segment.class.getPackage().getName().replace('.', SEPARATOR), hdb.locationOf(Segment.class));
-		assertEquals("dat" + SEPARATOR + "hierarchical" + SEPARATOR + hdb.getName() + SEPARATOR + "database" + SEPARATOR
-				+ Polygon.class.getPackage().getName().replace('.', SEPARATOR), hdb.locationOf(Polygon.class));
+		assertEquals("db/pdb" + SEPARATOR + "hierarchical" + SEPARATOR + hdb.getName() + SEPARATOR + "database"
+				+ SEPARATOR + Point.class.getPackage().getName().replace('.', SEPARATOR), hdb.locationOf(Point.class));
+		assertEquals("db/pdb" + SEPARATOR + "hierarchical" + SEPARATOR + hdb.getName() + SEPARATOR + "database"
+				+ SEPARATOR + Segment.class.getPackage().getName().replace('.', SEPARATOR),
+				hdb.locationOf(Segment.class));
+		assertEquals("db/pdb" + SEPARATOR + "hierarchical" + SEPARATOR + hdb.getName() + SEPARATOR + "database"
+				+ SEPARATOR + Polygon.class.getPackage().getName().replace('.', SEPARATOR),
+				hdb.locationOf(Polygon.class));
 
 	}
 
@@ -932,7 +934,7 @@ public class HierarchicalDatabaseTest extends BaseTest {
 
 	@Test
 	public void testGetLocation() {
-		assertEquals("dat" + SEPARATOR + "hierarchical" + SEPARATOR + hdb.getName() + SEPARATOR + "database",
+		assertEquals("db/pdb" + SEPARATOR + "hierarchical" + SEPARATOR + hdb.getName() + SEPARATOR + "database",
 				hdb.getLocation());
 	}
 

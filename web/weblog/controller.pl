@@ -1,1 +1,1 @@
-:-consult('controller/weblog_address_controller.pl').
+weblog_controller('controller/weblog_address_controller.pl').

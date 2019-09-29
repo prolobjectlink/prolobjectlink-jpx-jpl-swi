@@ -44,7 +44,7 @@ public class DatabaseFunctionTest extends BaseTest {
 	@Test
 	public void testGetPath() {
 		DatabaseFunction f = rdb.getSchema().addFunction("pitagoras", "");
-		assertEquals("dat/relational/test/functions.pl", f.getPath());
+		assertEquals("db/pdb/relational/test/functions.pl", f.getPath());
 	}
 
 	@Test

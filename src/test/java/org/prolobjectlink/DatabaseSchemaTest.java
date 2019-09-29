@@ -374,7 +374,7 @@ public class DatabaseSchemaTest extends BaseTest {
 
 	@Test
 	public void testGetLocation() {
-		assertEquals("dat" + File.separator + "relational" + File.separator + "test" + File.separator + "database",
+		assertEquals("db/pdb/relational" + File.separator + "test" + File.separator + "database",
 				rdb.getLocation());
 	}
 

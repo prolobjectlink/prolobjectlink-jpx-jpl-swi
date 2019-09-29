@@ -1,5 +1,42 @@
-Listing...
+<a href="{{ path("webpro_address_new") }}">Nuevo</a>
 
-{{for value in RESULT}}
-   Got {{value}} from the Result
-{{end}}
+<table class="article" border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Street</th>
+                        <th>State</th>
+                        <th>Zip</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    {{for value in LIST}}
+                    
+                    <tr>
+                        <td style="width: 100px;" align="center">{{value.getStreet()}}</td>
+                        <td style="width: 100px;" align="center">{{value.getState()}}</td>
+                        <td style="width: 100px;" align="center">{{value.getZip()}}</td>
+                        <td style="width: 100px;" align="center">{{value.getCity()}}</td>
+                        <td style="width: 100px;" align="center">{{value.getCountry()}}</td>
+                        <td style="width: 100px;" align="center">
+                            <ul>
+                                <li>
+                                    <a href="{{ path("webpro_address_find/"+value.getId()) }}">Detalles</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path("webpro_address_edit/"+value.getId()) }}">Editar</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path("webpro_address_delete/"+value.getId()) }}">Eliminar</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    {{end}}
+                        
+                </tbody>
+</table>

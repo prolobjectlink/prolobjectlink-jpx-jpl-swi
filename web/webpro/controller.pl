@@ -1,1 +1,1 @@
-controller('controller/webpro_addess_controller.pl').
+webpro_controller('controller/webpro_address_controller.pl').

@@ -1,5 +1,37 @@
-Street: {{ENTITY.getStreet()}}.
-State: {{ENTITY.getState()}}.
-Zip: {{ENTITY.getZip()}}.
-City: {{ENTITY.getCity()}}.
-Country: {{ENTITY.getCountry()}}.
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Create</title>
+    </head>
+    <body>
+
+<a href="{{ path("weblog_address_new") }}">Nuevo</a>
+<a href="{{ path("weblog_address_edit/"+ENTITY.getId()) }}">Editar</a>
+
+<table class="show">
+    <tbody>
+        <tr>
+            <th>Street</th>
+            <td>{{ENTITY.getStreet()}}</td>
+        </tr>
+        <tr>
+            <th>State</th>
+            <td>{{ENTITY.getState()}}</td>
+        </tr>
+        <tr>
+            <th>Zip</th>
+            <td>{{ENTITY.getZip()}}</td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td>{{ENTITY.getCity()}}.</td>
+        </tr>
+        <tr>
+            <th>Country</th>
+            <td>{{ENTITY.getCountry()}}</td>
+        </tr>
+    </tbody>
+</table>
+<a href="{{ path("weblog_address_find_all") }}">List</a>
+</body>
+</html>
