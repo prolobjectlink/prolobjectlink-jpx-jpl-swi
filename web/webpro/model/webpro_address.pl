@@ -78,11 +78,11 @@ webpro_address_get_street(REF, OUT) :-
 webpro_address_set_state(REF, ARG0) :- 
 	object_call(REF, setState, '.'(ARG0, []), _).
 
-webpro_address_set_id(REF, ARG0) :- 
-	object_call(REF, setId, '.'(ARG0, []), _).
-
 webpro_address_set_country(REF, ARG0) :- 
 	object_call(REF, setCountry, '.'(ARG0, []), _).
+
+webpro_address_set_id(REF, ARG0) :- 
+	object_call(REF, setId, '.'(ARG0, []), _).
 
 webpro_address_get_id(REF, OUT) :- 
 	object_call(REF, getId, [], OUT).

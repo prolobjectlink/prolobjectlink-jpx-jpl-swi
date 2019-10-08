@@ -27,11 +27,11 @@
 weblog_address(OUT) :- 
 	object_new('weblog.model.WeblogAddress', [], OUT).
 
-weblog_address_get_street(REF, OUT) :- 
-	object_call(REF, getStreet, [], OUT).
-
 weblog_address_get_city(REF, OUT) :- 
 	object_call(REF, getCity, [], OUT).
+
+weblog_address_get_street(REF, OUT) :- 
+	object_call(REF, getStreet, [], OUT).
 
 weblog_address_get_class(REF, OUT) :- 
 	object_call(REF, getClass, [], OUT).

@@ -1,5 +1,5 @@
 provider('org.hibernate.jpa.HibernatePersistenceProvider').
-url('jdbc:hsqldb:file:/opt/db/weblog').
+url('jdbc:hsqldb:file:/weblog').
 driver('org.hsqldb.jdbc.JDBCDriver').
 password('').
 user('sa').
