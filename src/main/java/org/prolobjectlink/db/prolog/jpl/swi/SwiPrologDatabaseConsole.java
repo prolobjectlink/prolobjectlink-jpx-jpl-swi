@@ -26,9 +26,6 @@ import java.util.logging.Logger;
 
 import org.prolobjectlink.db.DatabaseConsole;
 import org.prolobjectlink.db.DatabaseServer;
-import org.prolobjectlink.db.platform.linux.LinuxDatabaseServer;
-import org.prolobjectlink.db.platform.macosx.MacosxDatabaseServer;
-import org.prolobjectlink.db.platform.win32.Win32DatabaseServer;
 import org.prolobjectlink.db.prolog.AbstractDatabaseConsole;
 import org.prolobjectlink.web.application.GrizzlyModelGenerator;
 import org.prolobjectlink.web.application.ModelGenerator;
