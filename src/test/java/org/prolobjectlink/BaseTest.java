@@ -65,10 +65,11 @@ import org.prolobjectlink.domain.model.Department;
 import org.prolobjectlink.domain.model.Employee;
 import org.prolobjectlink.domain.model.Person;
 import org.prolobjectlink.domain.model.view.AnEmployeeView;
-import org.prolobjectlink.prolog.Prolog;
-import org.prolobjectlink.prolog.PrologInteger;
-import org.prolobjectlink.prolog.PrologProvider;
-import org.prolobjectlink.prolog.jpl.swi.SwiProlog;
+
+import io.github.prolobjectlink.prolog.Prolog;
+import io.github.prolobjectlink.prolog.PrologInteger;
+import io.github.prolobjectlink.prolog.PrologProvider;
+import io.github.prolobjectlink.prolog.jpl.swi.SwiProlog;
 
 /** @author Jose Zalacain @since 1.0 */
 public abstract class BaseTest {

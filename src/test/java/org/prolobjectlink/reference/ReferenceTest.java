@@ -31,8 +31,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.prolobjectlink.BaseTest;
-import org.prolobjectlink.prolog.PrologEngine;
-import org.prolobjectlink.prolog.PrologQuery;
+
+import io.github.prolobjectlink.prolog.PrologEngine;
+import io.github.prolobjectlink.prolog.PrologQuery;
 
 public class ReferenceTest extends BaseTest {
 
