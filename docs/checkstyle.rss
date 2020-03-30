@@ -3,19 +3,19 @@
 <rss version="0.91">
   <channel>
     <title>prolobjectlink-jpx-jpl-swi - Checkstyle report</title>
-    <link>https://github.com/prolobjectlink/prolobjectlink-jpx-jpl-swi</link>
+    <link>https://prolobjectlink.github.io/prolobjectlink-jpx-jpl-swi</link>
     <description>prolobjectlink-jpx-jpl-swi - Checkstyle report</description>
     <language>en-us</language>
-    <copyright>&#169;2012 - 2020 Prolobjectlink Project</copyright>
+    <copyright>&#169;2020 Prolobjectlink Project</copyright>
     <item>
       <title>File: 7,
              Errors: 273,
              Warnings: 0,
              Infos: 0
       </title>
-            <link>https://github.com/prolobjectlink/prolobjectlink-jpx-jpl-swi/checkstyle.html</link>
+            <link>https://prolobjectlink.github.io/prolobjectlink-jpx-jpl-swi/checkstyle.html</link>
       <description>
-        <p>Click <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl-swi/checkstyle.html">here</a> for the full Checkstyle report.</p>
+        <p>Click <a href="https://prolobjectlink.github.io/prolobjectlink-jpx-jpl-swi/checkstyle.html">here</a> for the full Checkstyle report.</p>
 
         <table summary="Files" boder="1">
           <thead>
@@ -29,7 +29,7 @@
           <tbody>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologContainerFactory.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologContainerFactory.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologContainerFactory.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologContainerFactory.java</a>
                 </td>
                 <td>
                   0
@@ -43,7 +43,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologHierarchicalCache.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologHierarchicalCache.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologHierarchicalCache.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologHierarchicalCache.java</a>
                 </td>
                 <td>
                   0
@@ -57,7 +57,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseProvider.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologDatabaseProvider.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseProvider.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologDatabaseProvider.java</a>
                 </td>
                 <td>
                   0
@@ -71,7 +71,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologProgrammer.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologProgrammer.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologProgrammer.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologProgrammer.java</a>
                 </td>
                 <td>
                   0
@@ -85,7 +85,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseEngine.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologDatabaseEngine.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseEngine.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologDatabaseEngine.java</a>
                 </td>
                 <td>
                   0
@@ -99,7 +99,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseConsole.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologDatabaseConsole.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseConsole.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologDatabaseConsole.java</a>
                 </td>
                 <td>
                   0
@@ -113,7 +113,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/prolobjectlink/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologPersistenceProvider.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologPersistenceProvider.java</a>
+                  <a href="https://prolobjectlink.github.io/prolobjectlink-jpx-jpl-swi/checkstyle.html#org.prolobjectlink.db.prolog.jpl.swi.SwiPrologPersistenceProvider.java">org/prolobjectlink/db/prolog/jpl/swi/SwiPrologPersistenceProvider.java</a>
                 </td>
                 <td>
                   0
