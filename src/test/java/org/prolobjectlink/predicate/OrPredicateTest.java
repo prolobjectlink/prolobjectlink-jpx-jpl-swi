@@ -22,8 +22,9 @@
 package org.prolobjectlink.predicate;
 
 import org.junit.Test;
-import org.prolobjectlink.db.predicate.OrPredicate;
 import org.prolobjectlink.domain.geometry.Point;
+
+import io.github.prolobjectlink.db.predicate.OrPredicate;
 
 public class OrPredicateTest extends BasePredicateTest {
 

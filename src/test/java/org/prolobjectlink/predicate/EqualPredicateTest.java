@@ -22,10 +22,11 @@
 package org.prolobjectlink.predicate;
 
 import org.junit.Test;
-import org.prolobjectlink.db.predicate.EqualPredicate;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
+
+import io.github.prolobjectlink.db.predicate.EqualPredicate;
 
 public class EqualPredicateTest extends BasePredicateTest {
 

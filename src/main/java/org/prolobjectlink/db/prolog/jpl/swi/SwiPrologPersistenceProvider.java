@@ -21,7 +21,7 @@
  */
 package org.prolobjectlink.db.prolog.jpl.swi;
 
-import static org.prolobjectlink.db.XmlParser.XML;
+import static io.github.prolobjectlink.db.XmlParser.XML;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -31,23 +31,23 @@ import java.util.Properties;
 
 import javax.persistence.spi.PersistenceProvider;
 
-import org.prolobjectlink.db.DatabaseEngine;
-import org.prolobjectlink.db.DatabaseSchema;
-import org.prolobjectlink.db.DatabaseUnitInfo;
-import org.prolobjectlink.db.DatabaseUser;
-import org.prolobjectlink.db.Protocol;
-import org.prolobjectlink.db.Schema;
-import org.prolobjectlink.db.etc.Settings;
-import org.prolobjectlink.db.jpa.JpaAbstractProvider;
-import org.prolobjectlink.db.jpa.JpaEntityManagerFactory;
-import org.prolobjectlink.db.jpa.JpaProperties;
-import org.prolobjectlink.db.memory.MemoryHierarchical;
-import org.prolobjectlink.db.persistent.EmbeddedHierarchical;
-import org.prolobjectlink.db.persistent.RemoteHierarchical;
-import org.prolobjectlink.db.util.JavaReflect;
-import org.prolobjectlink.db.xml.PersistenceXmlParser;
-import org.prolobjectlink.logging.LoggerConstants;
-import org.prolobjectlink.logging.LoggerUtils;
+import io.github.prolobjectlink.db.DatabaseEngine;
+import io.github.prolobjectlink.db.DatabaseSchema;
+import io.github.prolobjectlink.db.DatabaseUnitInfo;
+import io.github.prolobjectlink.db.DatabaseUser;
+import io.github.prolobjectlink.db.Protocol;
+import io.github.prolobjectlink.db.Schema;
+import io.github.prolobjectlink.db.etc.Settings;
+import io.github.prolobjectlink.db.jpa.JpaAbstractProvider;
+import io.github.prolobjectlink.db.jpa.JpaEntityManagerFactory;
+import io.github.prolobjectlink.db.jpa.JpaProperties;
+import io.github.prolobjectlink.db.memory.MemoryHierarchical;
+import io.github.prolobjectlink.db.persistent.EmbeddedHierarchical;
+import io.github.prolobjectlink.db.persistent.RemoteHierarchical;
+import io.github.prolobjectlink.db.util.JavaReflect;
+import io.github.prolobjectlink.db.xml.PersistenceXmlParser;
+import io.github.prolobjectlink.logging.LoggerConstants;
+import io.github.prolobjectlink.logging.LoggerUtils;
 
 public class SwiPrologPersistenceProvider extends JpaAbstractProvider implements PersistenceProvider {
 

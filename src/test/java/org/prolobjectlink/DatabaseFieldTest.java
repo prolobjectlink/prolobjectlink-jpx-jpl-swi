@@ -25,10 +25,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-import org.prolobjectlink.db.DatabaseClass;
-import org.prolobjectlink.db.DatabaseField;
 import org.prolobjectlink.domain.model.Address;
 import org.prolobjectlink.domain.model.link.PersonAddress;
+
+import io.github.prolobjectlink.db.DatabaseClass;
+import io.github.prolobjectlink.db.DatabaseField;
 
 public class DatabaseFieldTest extends BaseTest {
 

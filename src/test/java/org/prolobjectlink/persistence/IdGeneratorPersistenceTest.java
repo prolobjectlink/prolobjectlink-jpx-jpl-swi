@@ -27,10 +27,11 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.prolobjectlink.BaseTest;
-import org.prolobjectlink.db.generator.IncrementGenerator;
-import org.prolobjectlink.db.generator.TimestampGenerator;
-import org.prolobjectlink.db.generator.UUIDGenerator;
 import org.prolobjectlink.domain.geometry.Point;
+
+import io.github.prolobjectlink.db.generator.IncrementGenerator;
+import io.github.prolobjectlink.db.generator.TimestampGenerator;
+import io.github.prolobjectlink.db.generator.UUIDGenerator;
 
 public class IdGeneratorPersistenceTest extends BaseTest {
 

@@ -22,7 +22,8 @@
 package org.prolobjectlink.predicate;
 
 import org.junit.Test;
-import org.prolobjectlink.db.predicate.NullPredicate;
+
+import io.github.prolobjectlink.db.predicate.NullPredicate;
 
 public class NullPredicateTest extends BasePredicateTest {
 

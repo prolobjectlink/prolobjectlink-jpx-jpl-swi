@@ -22,10 +22,11 @@
 package org.prolobjectlink.predicate;
 
 import org.junit.Test;
-import org.prolobjectlink.db.predicate.InstanceOfPredicate;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
+
+import io.github.prolobjectlink.db.predicate.InstanceOfPredicate;
 
 public class InstanceOfPredicateTest extends BasePredicateTest {
 

@@ -21,7 +21,7 @@
  */
 package org.prolobjectlink;
 
-import static org.prolobjectlink.db.XmlParser.XML;
+import static io.github.prolobjectlink.db.XmlParser.XML;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -38,21 +38,6 @@ import javax.persistence.Persistence;
 
 import org.junit.After;
 import org.junit.Before;
-import org.prolobjectlink.db.ContainerFactory;
-import org.prolobjectlink.db.DatabaseClass;
-import org.prolobjectlink.db.DatabaseUser;
-import org.prolobjectlink.db.HierarchicalCache;
-import org.prolobjectlink.db.HierarchicalDatabase;
-import org.prolobjectlink.db.Protocol;
-import org.prolobjectlink.db.RelationalDatabase;
-import org.prolobjectlink.db.Schema;
-import org.prolobjectlink.db.Storage;
-import org.prolobjectlink.db.StorageManager;
-import org.prolobjectlink.db.StorageMode;
-import org.prolobjectlink.db.StoragePool;
-import org.prolobjectlink.db.etc.Settings;
-import org.prolobjectlink.db.jpa.spi.JPAPersistenceSchemaVersion;
-import org.prolobjectlink.db.jpa.spi.JPAPersistenceVersion;
 import org.prolobjectlink.db.prolog.jpl.swi.SwiPrologContainerFactory;
 import org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseProvider;
 import org.prolobjectlink.domain.geometry.Point;
@@ -66,6 +51,21 @@ import org.prolobjectlink.domain.model.Employee;
 import org.prolobjectlink.domain.model.Person;
 import org.prolobjectlink.domain.model.view.AnEmployeeView;
 
+import io.github.prolobjectlink.db.ContainerFactory;
+import io.github.prolobjectlink.db.DatabaseClass;
+import io.github.prolobjectlink.db.DatabaseUser;
+import io.github.prolobjectlink.db.HierarchicalCache;
+import io.github.prolobjectlink.db.HierarchicalDatabase;
+import io.github.prolobjectlink.db.Protocol;
+import io.github.prolobjectlink.db.RelationalDatabase;
+import io.github.prolobjectlink.db.Schema;
+import io.github.prolobjectlink.db.Storage;
+import io.github.prolobjectlink.db.StorageManager;
+import io.github.prolobjectlink.db.StorageMode;
+import io.github.prolobjectlink.db.StoragePool;
+import io.github.prolobjectlink.db.etc.Settings;
+import io.github.prolobjectlink.db.jpa.spi.JPAPersistenceSchemaVersion;
+import io.github.prolobjectlink.db.jpa.spi.JPAPersistenceVersion;
 import io.github.prolobjectlink.prolog.Prolog;
 import io.github.prolobjectlink.prolog.PrologInteger;
 import io.github.prolobjectlink.prolog.PrologProvider;

@@ -21,12 +21,12 @@
  */
 package org.prolobjectlink.performance;
 
-import org.prolobjectlink.db.ContainerFactory;
-import org.prolobjectlink.db.Storage;
-import org.prolobjectlink.db.etc.Settings;
 import org.prolobjectlink.db.prolog.jpl.swi.SwiPrologContainerFactory;
 import org.prolobjectlink.domain.geometry.Point;
 
+import io.github.prolobjectlink.db.ContainerFactory;
+import io.github.prolobjectlink.db.Storage;
+import io.github.prolobjectlink.db.etc.Settings;
 import io.github.prolobjectlink.prolog.Prolog;
 import io.github.prolobjectlink.prolog.PrologProvider;
 import io.github.prolobjectlink.prolog.jpl.swi.SwiProlog;

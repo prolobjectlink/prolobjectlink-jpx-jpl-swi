@@ -38,6 +38,8 @@ import org.junit.Test;
 import org.prolobjectlink.BaseTest;
 import org.prolobjectlink.domain.model.Person;
 
+import io.github.prolobjectlink.db.jpa.JpaEntityManagerFactory;
+
 public class JPAEntityManagerFactoryTest extends BaseTest {
 
 	@Test

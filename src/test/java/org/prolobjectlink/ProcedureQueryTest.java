@@ -30,10 +30,11 @@ import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.prolobjectlink.db.ProcedureQuery;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
+
+import io.github.prolobjectlink.db.ProcedureQuery;
 
 public class ProcedureQueryTest extends BaseTest {
 

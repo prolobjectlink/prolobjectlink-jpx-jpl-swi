@@ -33,16 +33,16 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
-import org.prolobjectlink.db.ObjectConverterFactory;
-import org.prolobjectlink.db.Predicate;
-import org.prolobjectlink.db.ProcedureQuery;
-import org.prolobjectlink.db.etc.Settings;
-import org.prolobjectlink.db.prolog.PrologObjectConverter;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
 import org.prolobjectlink.domain.geometry.Tetragon;
 
+import io.github.prolobjectlink.db.ObjectConverterFactory;
+import io.github.prolobjectlink.db.Predicate;
+import io.github.prolobjectlink.db.ProcedureQuery;
+import io.github.prolobjectlink.db.etc.Settings;
+import io.github.prolobjectlink.db.prolog.PrologObjectConverter;
 import io.github.prolobjectlink.prolog.PrologClause;
 import io.github.prolobjectlink.prolog.PrologEngine;
 

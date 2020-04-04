@@ -31,7 +31,7 @@
 <a class="jxr_linenumber" name="21" href="#21">21</a>  <em class="jxr_comment"> */</em>
 <a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">package</strong> org.prolobjectlink;
 <a class="jxr_linenumber" name="23" href="#23">23</a>  
-<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.prolobjectlink.db.XmlParser.XML;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> io.github.prolobjectlink.db.XmlParser.XML;
 <a class="jxr_linenumber" name="25" href="#25">25</a>  
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> java.net.URL;
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> java.util.ArrayList;
@@ -48,34 +48,34 @@
 <a class="jxr_linenumber" name="38" href="#38">38</a>  
 <a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> org.junit.After;
 <a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> org.junit.Before;
-<a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.ContainerFactory;
-<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.DatabaseClass;
-<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.DatabaseUser;
-<a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.HierarchicalCache;
-<a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.HierarchicalDatabase;
-<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.Protocol;
-<a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.RelationalDatabase;
-<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.Schema;
-<a class="jxr_linenumber" name="49" href="#49">49</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.Storage;
-<a class="jxr_linenumber" name="50" href="#50">50</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.StorageManager;
-<a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.StorageMode;
-<a class="jxr_linenumber" name="52" href="#52">52</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.StoragePool;
-<a class="jxr_linenumber" name="53" href="#53">53</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.etc.Settings;
-<a class="jxr_linenumber" name="54" href="#54">54</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.jpa.spi.JPAPersistenceSchemaVersion;
-<a class="jxr_linenumber" name="55" href="#55">55</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.jpa.spi.JPAPersistenceVersion;
-<a class="jxr_linenumber" name="56" href="#56">56</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.prolog.jpl.swi.SwiPrologContainerFactory;
-<a class="jxr_linenumber" name="57" href="#57">57</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseProvider;
-<a class="jxr_linenumber" name="58" href="#58">58</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.geometry.Point;
-<a class="jxr_linenumber" name="59" href="#59">59</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.geometry.Polygon;
-<a class="jxr_linenumber" name="60" href="#60">60</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.geometry.Segment;
-<a class="jxr_linenumber" name="61" href="#61">61</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.geometry.Tetragon;
-<a class="jxr_linenumber" name="62" href="#62">62</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.geometry.view.SamePoint;
-<a class="jxr_linenumber" name="63" href="#63">63</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.model.Address;
-<a class="jxr_linenumber" name="64" href="#64">64</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.model.Department;
-<a class="jxr_linenumber" name="65" href="#65">65</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.model.Employee;
-<a class="jxr_linenumber" name="66" href="#66">66</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.model.Person;
-<a class="jxr_linenumber" name="67" href="#67">67</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.model.view.AnEmployeeView;
-<a class="jxr_linenumber" name="68" href="#68">68</a>  
+<a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.prolog.jpl.swi.SwiPrologContainerFactory;
+<a class="jxr_linenumber" name="42" href="#42">42</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.db.prolog.jpl.swi.SwiPrologDatabaseProvider;
+<a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.geometry.Point;
+<a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.geometry.Polygon;
+<a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.geometry.Segment;
+<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.geometry.Tetragon;
+<a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.geometry.view.SamePoint;
+<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.model.Address;
+<a class="jxr_linenumber" name="49" href="#49">49</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.model.Department;
+<a class="jxr_linenumber" name="50" href="#50">50</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.model.Employee;
+<a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.model.Person;
+<a class="jxr_linenumber" name="52" href="#52">52</a>  <strong class="jxr_keyword">import</strong> org.prolobjectlink.domain.model.view.AnEmployeeView;
+<a class="jxr_linenumber" name="53" href="#53">53</a>  
+<a class="jxr_linenumber" name="54" href="#54">54</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.ContainerFactory;
+<a class="jxr_linenumber" name="55" href="#55">55</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.DatabaseClass;
+<a class="jxr_linenumber" name="56" href="#56">56</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.DatabaseUser;
+<a class="jxr_linenumber" name="57" href="#57">57</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.HierarchicalCache;
+<a class="jxr_linenumber" name="58" href="#58">58</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.HierarchicalDatabase;
+<a class="jxr_linenumber" name="59" href="#59">59</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.Protocol;
+<a class="jxr_linenumber" name="60" href="#60">60</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.RelationalDatabase;
+<a class="jxr_linenumber" name="61" href="#61">61</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.Schema;
+<a class="jxr_linenumber" name="62" href="#62">62</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.Storage;
+<a class="jxr_linenumber" name="63" href="#63">63</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.StorageManager;
+<a class="jxr_linenumber" name="64" href="#64">64</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.StorageMode;
+<a class="jxr_linenumber" name="65" href="#65">65</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.StoragePool;
+<a class="jxr_linenumber" name="66" href="#66">66</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.etc.Settings;
+<a class="jxr_linenumber" name="67" href="#67">67</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.jpa.spi.JPAPersistenceSchemaVersion;
+<a class="jxr_linenumber" name="68" href="#68">68</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.db.jpa.spi.JPAPersistenceVersion;
 <a class="jxr_linenumber" name="69" href="#69">69</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.prolog.Prolog;
 <a class="jxr_linenumber" name="70" href="#70">70</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.prolog.PrologInteger;
 <a class="jxr_linenumber" name="71" href="#71">71</a>  <strong class="jxr_keyword">import</strong> io.github.prolobjectlink.prolog.PrologProvider;

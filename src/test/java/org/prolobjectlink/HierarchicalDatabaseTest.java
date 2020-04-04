@@ -34,18 +34,18 @@ import java.util.List;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import org.prolobjectlink.db.ObjectConverter;
-import org.prolobjectlink.db.PersistentContainer;
-import org.prolobjectlink.db.Predicate;
-import org.prolobjectlink.db.ProcedureQuery;
-import org.prolobjectlink.db.engine.AbstractHierarchicalDatabase;
-import org.prolobjectlink.db.prolog.PrologHierarchicalDatabase;
-import org.prolobjectlink.db.prolog.PrologObjectConverter;
-import org.prolobjectlink.db.prolog.PrologStoragePool;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
 
+import io.github.prolobjectlink.db.ObjectConverter;
+import io.github.prolobjectlink.db.PersistentContainer;
+import io.github.prolobjectlink.db.Predicate;
+import io.github.prolobjectlink.db.ProcedureQuery;
+import io.github.prolobjectlink.db.engine.AbstractHierarchicalDatabase;
+import io.github.prolobjectlink.db.prolog.PrologHierarchicalDatabase;
+import io.github.prolobjectlink.db.prolog.PrologObjectConverter;
+import io.github.prolobjectlink.db.prolog.PrologStoragePool;
 import io.github.prolobjectlink.prolog.PrologEngine;
 import io.github.prolobjectlink.prolog.PrologTerm;
 

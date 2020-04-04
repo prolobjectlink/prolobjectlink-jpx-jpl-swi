@@ -31,10 +31,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
-import org.prolobjectlink.db.Predicate;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
+
+import io.github.prolobjectlink.db.Predicate;
 
 public class HierarchicalCacheTest extends BaseTest {
 

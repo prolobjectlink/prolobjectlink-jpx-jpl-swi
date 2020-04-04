@@ -28,7 +28,8 @@ import java.util.Arrays;
 
 import org.junit.Test;
 import org.prolobjectlink.BaseTest;
-import org.prolobjectlink.db.util.JavaLists;
+
+import io.github.prolobjectlink.db.util.JavaLists;
 
 public class JavaListsTest extends BaseTest {
 

@@ -30,8 +30,9 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 
 import org.junit.Test;
-import org.prolobjectlink.db.StorageMode;
-import org.prolobjectlink.db.etc.Settings;
+
+import io.github.prolobjectlink.db.StorageMode;
+import io.github.prolobjectlink.db.etc.Settings;
 
 public class SettingsTest extends BaseTest {
 

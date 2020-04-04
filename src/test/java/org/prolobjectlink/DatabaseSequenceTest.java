@@ -27,9 +27,10 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-import org.prolobjectlink.db.DatabaseSequence;
 import org.prolobjectlink.domain.model.Address;
 import org.prolobjectlink.domain.model.Person;
+
+import io.github.prolobjectlink.db.DatabaseSequence;
 
 public class DatabaseSequenceTest extends BaseTest {
 

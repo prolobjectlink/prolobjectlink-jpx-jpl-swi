@@ -28,7 +28,8 @@ import java.util.LinkedHashMap;
 import java.util.TreeMap;
 
 import org.junit.Test;
-import org.prolobjectlink.db.util.JavaMaps;
+
+import io.github.prolobjectlink.db.util.JavaMaps;
 
 public class JavaMapsTest {
 

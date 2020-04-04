@@ -30,14 +30,15 @@ import java.util.Collection;
 import java.util.Map;
 
 import org.junit.Test;
-import org.prolobjectlink.db.DatabaseClass;
-import org.prolobjectlink.db.DatabaseField;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.model.Address;
 import org.prolobjectlink.domain.model.Employee;
 import org.prolobjectlink.domain.model.Person;
 import org.prolobjectlink.domain.model.link.AddressPerson;
 import org.prolobjectlink.domain.model.link.PersonAddress;
+
+import io.github.prolobjectlink.db.DatabaseClass;
+import io.github.prolobjectlink.db.DatabaseField;
 
 public class DatabaseClassTest extends BaseTest {
 

@@ -21,12 +21,11 @@
  */
 package org.prolobjectlink.db.prolog.jpl.swi;
 
-import org.prolobjectlink.db.ContainerFactory;
-import org.prolobjectlink.db.HierarchicalCache;
-import org.prolobjectlink.db.ObjectConverter;
-import org.prolobjectlink.db.etc.Settings;
-import org.prolobjectlink.db.prolog.PrologHierarchicalCache;
-
+import io.github.prolobjectlink.db.ContainerFactory;
+import io.github.prolobjectlink.db.HierarchicalCache;
+import io.github.prolobjectlink.db.ObjectConverter;
+import io.github.prolobjectlink.db.etc.Settings;
+import io.github.prolobjectlink.db.prolog.PrologHierarchicalCache;
 import io.github.prolobjectlink.prolog.PrologProvider;
 import io.github.prolobjectlink.prolog.PrologTerm;
 

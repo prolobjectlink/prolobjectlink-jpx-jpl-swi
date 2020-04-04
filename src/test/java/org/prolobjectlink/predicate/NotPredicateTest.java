@@ -22,12 +22,13 @@
 package org.prolobjectlink.predicate;
 
 import org.junit.Test;
-import org.prolobjectlink.db.predicate.FalsePredicate;
-import org.prolobjectlink.db.predicate.NotNullPredicate;
-import org.prolobjectlink.db.predicate.NotPredicate;
-import org.prolobjectlink.db.predicate.NullPredicate;
-import org.prolobjectlink.db.predicate.TruePredicate;
 import org.prolobjectlink.domain.geometry.Point;
+
+import io.github.prolobjectlink.db.predicate.FalsePredicate;
+import io.github.prolobjectlink.db.predicate.NotNullPredicate;
+import io.github.prolobjectlink.db.predicate.NotPredicate;
+import io.github.prolobjectlink.db.predicate.NullPredicate;
+import io.github.prolobjectlink.db.predicate.TruePredicate;
 
 public class NotPredicateTest extends BasePredicateTest {
 

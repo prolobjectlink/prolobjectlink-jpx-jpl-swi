@@ -22,8 +22,9 @@
 package org.prolobjectlink.predicate;
 
 import org.junit.Test;
-import org.prolobjectlink.db.predicate.AndPredicate;
 import org.prolobjectlink.domain.geometry.Point;
+
+import io.github.prolobjectlink.db.predicate.AndPredicate;
 
 public class AndPredicateTest extends BasePredicateTest {
 

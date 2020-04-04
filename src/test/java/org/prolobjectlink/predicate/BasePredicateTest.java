@@ -23,9 +23,10 @@ package org.prolobjectlink.predicate;
 
 import org.junit.Assert;
 import org.prolobjectlink.BaseTest;
-import org.prolobjectlink.db.Predicate;
-import org.prolobjectlink.db.predicate.NotNullPredicate;
 import org.prolobjectlink.domain.geometry.Point;
+
+import io.github.prolobjectlink.db.Predicate;
+import io.github.prolobjectlink.db.predicate.NotNullPredicate;
 
 /** @author Jose Zalacain @since 1.0 */
 public abstract class BasePredicateTest extends BaseTest {

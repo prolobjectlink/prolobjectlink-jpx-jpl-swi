@@ -27,7 +27,8 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-import org.prolobjectlink.db.DatabaseFunction;
+
+import io.github.prolobjectlink.db.DatabaseFunction;
 
 public class DatabaseFunctionTest extends BaseTest {
 

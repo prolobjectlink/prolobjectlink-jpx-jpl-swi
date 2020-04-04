@@ -21,11 +21,10 @@
  */
 package org.prolobjectlink.db.prolog.jpl.swi;
 
-import org.prolobjectlink.db.ObjectConverter;
-import org.prolobjectlink.db.prolog.PrologDatabaseEngine;
-import org.prolobjectlink.db.prolog.PrologObjectConverter;
-import org.prolobjectlink.db.prolog.PrologProgrammer;
-
+import io.github.prolobjectlink.db.ObjectConverter;
+import io.github.prolobjectlink.db.prolog.PrologDatabaseEngine;
+import io.github.prolobjectlink.db.prolog.PrologObjectConverter;
+import io.github.prolobjectlink.db.prolog.PrologProgrammer;
 import io.github.prolobjectlink.prolog.PrologProvider;
 import io.github.prolobjectlink.prolog.PrologTerm;
 import io.github.prolobjectlink.prolog.jpl.swi.SwiPrologEngine;

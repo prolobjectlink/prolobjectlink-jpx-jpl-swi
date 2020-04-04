@@ -28,7 +28,8 @@ import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
 import org.junit.Test;
-import org.prolobjectlink.db.util.JavaSets;
+
+import io.github.prolobjectlink.db.util.JavaSets;
 
 public class JavaSetsTest {
 

@@ -29,15 +29,17 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 
 import org.junit.Test;
-import org.prolobjectlink.db.DatabaseClass;
-import org.prolobjectlink.db.DatabaseFunction;
-import org.prolobjectlink.db.DatabaseSequence;
-import org.prolobjectlink.db.DatabaseUser;
-import org.prolobjectlink.db.RelationalGraph;
 import org.prolobjectlink.domain.model.Address;
 import org.prolobjectlink.domain.model.Department;
 import org.prolobjectlink.domain.model.Employee;
 import org.prolobjectlink.domain.model.Person;
+
+import io.github.prolobjectlink.GraphEdge;
+import io.github.prolobjectlink.db.DatabaseClass;
+import io.github.prolobjectlink.db.DatabaseFunction;
+import io.github.prolobjectlink.db.DatabaseSequence;
+import io.github.prolobjectlink.db.DatabaseUser;
+import io.github.prolobjectlink.db.RelationalGraph;
 
 public class DatabaseSchemaTest extends BaseTest {
 

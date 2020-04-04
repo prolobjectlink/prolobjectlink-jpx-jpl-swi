@@ -22,8 +22,9 @@
 package org.prolobjectlink.predicate;
 
 import org.junit.Test;
-import org.prolobjectlink.db.predicate.FalsePredicate;
 import org.prolobjectlink.domain.geometry.Point;
+
+import io.github.prolobjectlink.db.predicate.FalsePredicate;
 
 public class FalsePredicateTest extends BasePredicateTest {
 

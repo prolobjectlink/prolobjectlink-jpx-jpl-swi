@@ -29,10 +29,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 import org.junit.Test;
-import org.prolobjectlink.db.TypedQuery;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
+
+import io.github.prolobjectlink.db.TypedQuery;
 
 public class TypedQueryTest extends BaseTest {
 

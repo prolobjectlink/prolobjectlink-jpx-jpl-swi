@@ -32,10 +32,11 @@ import java.util.Comparator;
 import java.util.List;
 
 import org.junit.Test;
-import org.prolobjectlink.db.Query;
 import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
+
+import io.github.prolobjectlink.db.Query;
 
 public class QueryTest extends BaseTest {
 

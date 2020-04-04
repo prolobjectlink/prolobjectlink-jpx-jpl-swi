@@ -23,10 +23,9 @@ package org.prolobjectlink.db.prolog.jpl.swi;
 
 import java.io.PrintWriter;
 
-import org.prolobjectlink.db.prolog.PrologProgrammer;
-import org.prolobjectlink.web.application.AbstractViewProgrammer;
-
+import io.github.prolobjectlink.db.prolog.PrologProgrammer;
 import io.github.prolobjectlink.prolog.PrologProvider;
+import io.github.prolobjectlink.web.application.AbstractViewProgrammer;
 
 /**
  * 

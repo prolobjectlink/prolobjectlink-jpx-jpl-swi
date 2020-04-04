@@ -36,6 +36,9 @@ import org.prolobjectlink.domain.geometry.Point;
 import org.prolobjectlink.domain.geometry.Polygon;
 import org.prolobjectlink.domain.geometry.Segment;
 
+import io.github.prolobjectlink.db.jpa.JpaTuple;
+import io.github.prolobjectlink.db.jpa.JpaTupleElement;
+
 public class JPATupleTest extends BaseTest {
 
 	private TupleElement<Point> pointTupleElement = new JpaTupleElement<Point>("point", Point.class, a);
