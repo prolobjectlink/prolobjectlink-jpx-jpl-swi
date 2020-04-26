@@ -1,3 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
+<duplication lines="31" tokens="163">
+<file line="46" path="C:\Users\Jose Zalacain\Documents\eclipse-java-photon-workspace\prolobjectlink-jpx-jpl-swi\src\main\java\io\github\prolobjectlink\db\prolog\jpl\swi\SwiPrologDatabaseEngine.java"/>
+<file line="46" path="C:\Users\Jose Zalacain\Documents\eclipse-java-photon-workspace\prolobjectlink-jpx-jpl-swi\src\main\java\io\github\prolobjectlink\db\prolog\jpl\swi\SwiPrologWebEngine.java"/>
+<codefragment>
+<![CDATA[
+	SwiPrologWebEngine(PrologProvider provider, String file) {
+		super(provider, file);
+		converter = new PrologObjectConverter(provider);
+	}
+
+	public boolean unify(Object x, Object y) {
+		PrologTerm xt = converter.toTerm(x);
+		PrologTerm yt = converter.toTerm(y);
+		return unify(xt, yt);
+	}
+
+	public PrologProgrammer getProgrammer() {
+		return new SwiPrologProgrammer(getProvider());
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + ((converter == null) ? 0 : converter.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+]]>
+</codefragment>
+</duplication>
 </pmd-cpd>

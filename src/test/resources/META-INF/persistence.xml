@@ -30,24 +30,24 @@
 		transaction-type="RESOURCE_LOCAL">
 
 		<description>This is an implementation of JPA</description>
-		<provider>org.prolobjectlink.provider.SwiPrologPersistenceProvider
+		<provider>io.github.prolobjectlink.provider.SwiPrologPersistenceProvider
 		</provider>
 
 		<jta-data-source>jdbc/sample</jta-data-source>
 
-		<class>org.prolobjectlink.domain.geometry.Point</class>
-		<class>org.prolobjectlink.domain.geometry.Segment</class>
-		<class>org.prolobjectlink.domain.geometry.Polygon</class>
-		<class>org.prolobjectlink.domain.geometry.Tetragon</class>
-		<class>org.prolobjectlink.domain.model.Person</class>
-		<class>org.prolobjectlink.domain.model.Employee</class>
-		<class>org.prolobjectlink.domain.model.Department</class>
-		<class>org.prolobjectlink.domain.model.Node</class>
+		<class>io.github.prolobjectlink.domain.geometry.Point</class>
+		<class>io.github.prolobjectlink.domain.geometry.Segment</class>
+		<class>io.github.prolobjectlink.domain.geometry.Polygon</class>
+		<class>io.github.prolobjectlink.domain.geometry.Tetragon</class>
+		<class>io.github.prolobjectlink.domain.model.Person</class>
+		<class>io.github.prolobjectlink.domain.model.Employee</class>
+		<class>io.github.prolobjectlink.domain.model.Department</class>
+		<class>io.github.prolobjectlink.domain.model.Node</class>
 
 		<properties>
 
 			<property name="javax.persistence.jdbc.driver"
-				value="org.prolobjectlink.db.prolog.jpl.swi.SwiPrologContainerFactory" />
+				value="io.github.prolobjectlink.db.prolog.jpl.swi.SwiPrologContainerFactory" />
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:prolobjectlink:mempdb:~/test" />
 			<property name="javax.persistence.jdbc.user" value="sa" />

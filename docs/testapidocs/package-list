@@ -1,9 +1,9 @@
+io.github.prolobjectlink
+io.github.prolobjectlink.db.jpa
 io.github.prolobjectlink.db.modelgen
 io.github.prolobjectlink.db.prolog
-org.prolobjectlink
-org.prolobjectlink.db.jpa
-org.prolobjectlink.performance
-org.prolobjectlink.persistence
-org.prolobjectlink.predicate
-org.prolobjectlink.reference
-org.prolobjectlink.util
+io.github.prolobjectlink.performance
+io.github.prolobjectlink.persistence
+io.github.prolobjectlink.predicate
+io.github.prolobjectlink.reference
+io.github.prolobjectlink.util

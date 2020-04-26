@@ -26,8 +26,8 @@ import static org.junit.Assert.assertEquals;
 import java.util.Locale;
 
 import org.junit.Test;
-import org.prolobjectlink.BaseTest;
 
+import io.github.prolobjectlink.BaseTest;
 import io.github.prolobjectlink.db.prolog.PrologLocale;
 
 public class LocaleTest extends BaseTest {

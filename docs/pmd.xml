@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2020-04-17T17:50:15.764">
-<file name="C:\Users\Jose Zalacain\Documents\eclipse-java-photon-workspace\prolobjectlink-jpx-jpl-swi\src\main\java\org\prolobjectlink\db\prolog\jpl\swi\SwiPrologHierarchicalCache.java">
-<violation beginline="34" endline="36" begincolumn="16" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="org.prolobjectlink.db.prolog.jpl.swi" class="SwiPrologHierarchicalCache" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+<pmd version="4.2.5" timestamp="2020-06-04T18:11:32.249">
+<file name="C:\Users\Jose Zalacain\Documents\eclipse-java-photon-workspace\prolobjectlink-jpx-jpl-swi\src\main\java\io\github\prolobjectlink\db\prolog\jpl\swi\SwiPrologHierarchicalCache.java">
+<violation beginline="34" endline="36" begincolumn="16" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="io.github.prolobjectlink.db.prolog.jpl.swi" class="SwiPrologHierarchicalCache" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
 Avoid unused constructor parameters such as 'containerFactory'.
 </violation>
-<violation beginline="38" endline="41" begincolumn="16" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="org.prolobjectlink.db.prolog.jpl.swi" class="SwiPrologHierarchicalCache" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
+<violation beginline="38" endline="41" begincolumn="16" endcolumn="9" rule="UnusedFormalParameter" ruleset="Unused Code Rules" package="io.github.prolobjectlink.db.prolog.jpl.swi" class="SwiPrologHierarchicalCache" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedFormalParameter" priority="3">
 Avoid unused constructor parameters such as 'containerFactory'.
 </violation>
 </file>

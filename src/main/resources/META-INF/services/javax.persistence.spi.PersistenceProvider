@@ -1,1 +1,1 @@
-org.prolobjectlink.db.prolog.jpl.swi.SwiPrologPersistenceProvider
+io.github.prolobjectlink.db.prolog.jpl.swi.SwiPrologPersistenceProvider
